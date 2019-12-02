@@ -17,7 +17,7 @@ tester.run('rule', rule, {
     {
       errors: ['profile is specified 2 times in the argument of $path method'],
       code:
-        "dispatch($merge($set($path('profile'), { name: 'aaa' }), $set($path('profile.name', 'aaa'))))",
+        "dispatch($merge($set($path('profile'), { name: 'aaa' }), $set($path('profile', 'name'), 'aaa')))",
     },
   ],
 })
